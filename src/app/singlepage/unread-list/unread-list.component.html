@@ -1,0 +1,18 @@
+<div class="container">
+  <button class="btn btn-secondary mt-3" [routerLink]="['/']">Về trang chủ</button>
+
+  <table class="table table-bordered mt-2">
+    <thead class="thead-dark">
+      <tr>
+        <th colspan="2">Đã đọc</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of books">
+      <tr>
+        <td>{{ item.name }}</td>
+        <td><button class="btn btn-info" (click)="update(item.id)">Đọc lại</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <a [routerLink]="['/read-list']">Danh sách đọc</a>
+</div>
